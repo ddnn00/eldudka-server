@@ -9,7 +9,7 @@ namespace EldudkaServer.Services
 
         public CloudShopService(IConfiguration configuration)
         {
-            _authToken = configuration.GetConnectionString("cloudShopAuthToken");
+            _authToken = configuration["cloudShopAuthToken"];
         }
 
         public async Task<GetProductsResponse> GetProducts()
